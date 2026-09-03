@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# Unused source / heavy files (kept locally, excluded from the deployed repo)
+websiteherovideo.mp4
+hero1.png
+hero 2.png
+assets/hero-car.jpg
+assets/hero-poster.jpg
+assets/herovideo.mp4
+assets/logo-full.png

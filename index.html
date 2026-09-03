@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parki Valet — Premium Valet Service, Islandwide Singapore</title>
+  <meta name="description" content="Parki Valet — Singapore's premium after-hours valet service. Islandwide, daily 9pm–4am (Fri & Sat till 6am). Your car home, safely. Call 8956 7796." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="8" y="8" width="84" height="84" rx="18" fill="%232f4f62"/><text x="50" y="72" font-family="Helvetica,Arial,sans-serif" font-weight="bold" font-size="60" fill="%23ffffff" text-anchor="middle">P</text></svg>' />
+</head>
+<body>
+
+  <!-- ======= PRELOADER ======= -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <img class="preloader__logo" src="assets/logo-white.png" alt="Parki Valet" />
+      <div class="preloader__bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ======= NAV ======= -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#top" aria-label="Parki Valet home">
+        <img class="nav__logoimg nav__logoimg--light" src="assets/logo-white.png" alt="Parki Valet" />
+        <img class="nav__logoimg nav__logoimg--dark" src="assets/logo-nav.png" alt="Parki Valet" />
+      </a>
+      <div class="nav__links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#rates">Rates</a>
+        <a href="#how">How It Works</a>
+        <a href="#coverage">Coverage</a>
+      </div>
+      <a class="btn btn--accent btn--sm nav__cta" href="contact.html">Contact us</a>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#rates">Rates</a>
+    <a href="#how">How It Works</a>
+    <a href="#coverage">Coverage</a>
+    <a class="btn btn--accent" href="contact.html">Contact us</a>
+  </div>
+
+  <!-- ======= HERO (scroll transition: hotel -> car park) ======= -->
+  <section class="hero" id="top">
+    <div class="hero__pin" id="heroPin">
+      <div class="hero__card">
+        <img class="hero__img hero__img--hotel" id="heroHotel" src="assets/hero1.jpg" alt="Car waiting at a hotel entrance at night" />
+        <img class="hero__img hero__img--park" id="heroPark" src="assets/hero2.jpg" alt="The same car parked safely in a car park" />
+        <div class="hero__scrim"></div>
+
+        <div class="hero__body" id="heroIntro">
+          <p class="tag"><span class="tag__bar"></span>The care and precision behind Parki Valet</p>
+          <h1 class="hero__title">
+            Exceptional service<br />for every vehicle
+          </h1>
+          <p class="hero__hint">
+            <span class="hero__hint-line"></span>
+            Scroll
+          </p>
+        </div>
+
+        <div class="hero__outro" id="heroOutro">
+          <p class="tag"><span class="tag__bar"></span>The Parki promise</p>
+          <h2 class="hero__title hero__title--outro">Parked safely.</h2>
+          <p class="hero__sub">Professional valets who bring you and your car home safely. Islandwide, every night.</p>
+          <div class="hero__cta">
+            <a class="btn btn--accent btn--lg" href="https://wa.me/6589567796" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
+              Book on WhatsApp
+            </a>
+            <a class="btn btn--ghost btn--lg" href="tel:+6589567796">Call 8956 7796</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= MARQUEE ======= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Islandwide<i>&#9670;</i>Daily 9pm &ndash; 4am<i>&#9670;</i>Fri &amp; Sat till 6am<i>&#9670;</i>8956 7796<i>&#9670;</i></span>
+      <span>Islandwide<i>&#9670;</i>Daily 9pm &ndash; 4am<i>&#9670;</i>Fri &amp; Sat till 6am<i>&#9670;</i>8956 7796<i>&#9670;</i></span>
+      <span>Islandwide<i>&#9670;</i>Daily 9pm &ndash; 4am<i>&#9670;</i>Fri &amp; Sat till 6am<i>&#9670;</i>8956 7796<i>&#9670;</i></span>
+    </div>
+  </div>
+
+  <!-- ======= ABOUT / STATEMENT ======= -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="statement reveal">
+        From one late night call to a name Singapore trusts &mdash; Parki Valet is
+        built on safe hands, sharp timing, and genuine care for every driver we serve.
+      </h2>
+      <p class="statement__sub reveal">Meet the people who get you home &mdash; one night, one car, one safe arrival at a time.</p>
+
+      <div class="cards">
+        <article class="card reveal">
+          <p class="card__label"><span class="tag__bar"></span>Safety first</p>
+          <p>Every trip starts with a vetted driver, not a stranger. Our valets are licensed, insured and briefed on your car before they touch the wheel.</p>
+        </article>
+        <article class="card reveal">
+          <p class="card__label"><span class="tag__bar"></span>Care that shows</p>
+          <p>Seats, mirrors and settings left exactly as we found them. Clean hands, no rushing, and zero tolerance for shortcuts.</p>
+        </article>
+        <article class="card reveal">
+          <p class="card__label"><span class="tag__bar"></span>Straightforward pricing</p>
+          <p>We tell you what it costs before we move. Flat island rates, honest add-ons, and no surprise charges when the night ends.</p>
+        </article>
+        <article class="card reveal">
+          <p class="card__label"><span class="tag__bar"></span>A team that shows up</p>
+          <p>Parki Valet is built by people who take pride in doing the job right. Reliable, accountable, and there when you call.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SERVICES ======= -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <p class="tag"><span class="tag__bar"></span>Services</p>
+          <h2 class="heading">Premium valet,<br />every night of the week</h2>
+        </div>
+        <a class="btn btn--dark" href="contact.html">Book a valet</a>
+      </div>
+
+      <div class="svc-grid">
+        <article class="svc reveal">
+          <div class="svc__media"><img src="assets/night-drive.jpg" alt="Car driving through the city at night" loading="lazy" /></div>
+          <div class="svc__body">
+            <h3>Night valet</h3>
+            <p>A professional driver comes to you and takes your own car home. Doorstep to doorstep, anywhere on the island.</p>
+            <span class="svc__meta">From $45</span>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <div class="svc__media"><img src="assets/garage.jpg" alt="Car parked in a covered car park" loading="lazy" /></div>
+          <div class="svc__body">
+            <h3>Park &amp; return</h3>
+            <p>We park your car properly at the other end &mdash; season carpark, condo lot or driveway &mdash; and hand your keys back.</p>
+            <span class="svc__meta">Included</span>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <div class="svc__media"><img src="assets/car-highway.jpg" alt="Car on the expressway at dusk" loading="lazy" /></div>
+          <div class="svc__body">
+            <h3>Multi-stop trips</h3>
+            <p>Dropping friends off along the way? Add extra stops to your booking and we'll route the night for you.</p>
+            <span class="svc__meta">+ $10 per stop</span>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <div class="svc__media"><img src="assets/driver.jpg" alt="Valet driving a customer's car" loading="lazy" /></div>
+          <div class="svc__body">
+            <h3>On-call standby</h3>
+            <p>Not sure when you'll finish? We'll hold a valet for you and wait &mdash; billed only for the time we're on standby.</p>
+            <span class="svc__meta">+ $10 / 15 mins</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= RATES ======= -->
+  <section class="section rates" id="rates">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <p class="tag"><span class="tag__bar"></span>Rates</p>
+          <h2 class="heading">Simple, honest pricing</h2>
+        </div>
+        <a class="btn btn--dark" href="https://wa.me/6589567796" target="_blank" rel="noopener">Get a quote</a>
+      </div>
+
+      <div class="rate-grid">
+        <div class="rate-main reveal">
+          <div class="rate-main__top">
+            <div>
+              <h3>Valet Service</h3>
+              <ul class="rate-list">
+                <li>9pm &ndash; 4am &nbsp;(Mon &ndash; Thurs)</li>
+                <li>9pm &ndash; 6am &nbsp;(Fri &ndash; Sun)</li>
+                <li>Islandwide, no surcharge zones</li>
+              </ul>
+            </div>
+            <div class="rate-price"><span>$</span>45</div>
+          </div>
+          <a class="btn btn--accent rate-main__btn" href="https://wa.me/6589567796" target="_blank" rel="noopener">Book this rate</a>
+        </div>
+
+        <div class="rate-side">
+          <div class="rate-row reveal">
+            <span class="rate-row__name">Additional location</span>
+            <span class="rate-row__val">+ $10</span>
+          </div>
+          <div class="rate-row reveal">
+            <span class="rate-row__name">Waiting charges / 15 mins</span>
+            <span class="rate-row__val">+ $10</span>
+          </div>
+          <div class="rate-row reveal">
+            <span class="rate-row__name">Cancellation fee</span>
+            <span class="rate-row__val">$32</span>
+          </div>
+          <a class="rate-phone reveal" href="tel:+6589567796">
+            <span>Call us now</span>
+            8956 7796
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= HOW IT WORKS ======= -->
+  <section class="section how" id="how">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <p class="tag"><span class="tag__bar"></span>How it works</p>
+          <h2 class="heading">Three steps to a safe night</h2>
+        </div>
+      </div>
+
+      <div class="cards cards--3">
+        <article class="card card--step reveal">
+          <span class="card__num">01</span>
+          <h3>Message us</h3>
+          <p>WhatsApp or call 8956 7796 with your location and destination. We confirm in minutes.</p>
+        </article>
+        <article class="card card--step reveal">
+          <span class="card__num">02</span>
+          <h3>Meet your valet</h3>
+          <p>A professional driver arrives at your doorstep, restaurant or club &mdash; wherever the night took you.</p>
+        </article>
+        <article class="card card--step reveal">
+          <span class="card__num">03</span>
+          <h3>Ride home</h3>
+          <p>Relax in your own passenger seat. We drive you home and park your car for you.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= COVERAGE ======= -->
+  <section class="coverage" id="coverage">
+    <div class="coverage__card">
+      <div class="coverage__bg" data-parallax>
+        <img src="assets/singapore.jpg" alt="Aerial view of Singapore, Marina Bay" loading="lazy" />
+      </div>
+      <div class="coverage__scrim"></div>
+      <div class="coverage__body">
+        <p class="tag"><span class="tag__bar"></span>Coverage</p>
+        <h2 class="coverage__title">Anywhere on the island.<br />Any night of the week.</h2>
+        <div class="coverage__stats">
+          <div class="cstat reveal">
+            <span class="cstat__value">7<small>/wk</small></span>
+            <span class="cstat__label">Nights on the road</span>
+          </div>
+          <div class="cstat reveal">
+            <span class="cstat__value">9<small>pm</small>&ndash;6<small>am</small></span>
+            <span class="cstat__label">Latest weekend hours</span>
+          </div>
+          <div class="cstat reveal">
+            <span class="cstat__value">100<small>%</small></span>
+            <span class="cstat__label">Islandwide, no surcharge zones</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= NEWSLETTER ======= -->
+  <section class="newsletter">
+    <div class="container newsletter__inner">
+      <div class="newsletter__text reveal">
+        <h2>Stay out late.<br />Get home safe.</h2>
+        <p>Subscribe for our latest rates, late-night availability and updates.</p>
+      </div>
+      <form class="newsletter__form reveal" id="newsletterForm" novalidate>
+        <div class="newsletter__row">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" aria-label="Email address" required />
+          <button class="btn btn--accent" type="submit">Subscribe&nbsp;&rarr;</button>
+        </div>
+        <label class="newsletter__consent">
+          <input type="checkbox" required />
+          <span>I agree to receive updates from Parki Valet.</span>
+        </label>
+        <p class="newsletter__done" hidden>Thank you &mdash; you're on the list. See you tonight.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#top"><img class="footer__logoimg" src="assets/logo-white.png" alt="Parki Valet" /></a>
+          <p>Singapore's premium after-hours valet.<br />Your night out, our drive home.</p>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/profile.php?id=61580535384326" target="_blank" rel="noopener" aria-label="Parki Valet on Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.49h-2.8V24C19.62 23.09 24 18.1 24 12.07z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/parkivalet/" target="_blank" rel="noopener" aria-label="Parki Valet on Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.72 1.48 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+            </a>
+            <a href="https://wa.me/6589567796" target="_blank" rel="noopener" aria-label="Parki Valet on WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <a href="tel:+6589567796">+65 8956 7796</a>
+          <a href="https://wa.me/6589567796" target="_blank" rel="noopener">WhatsApp us</a>
+          <a href="contact.html">Contact page</a>
+        </div>
+
+        <div class="footer__col">
+          <h4>Hours</h4>
+          <p>Mon &ndash; Thurs &nbsp;9pm &ndash; 4am</p>
+          <p>Fri &ndash; Sun &nbsp;9pm &ndash; 6am</p>
+          <p>Islandwide, Singapore</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#rates">Rates</a>
+          <a href="#how">How it works</a>
+          <a href="#coverage">Coverage</a>
+        </div>
+      </div>
+
+      <div class="footer__bar">
+        <span>&copy; 2026 Parki Valet. All rights reserved.</span>
+        <span>Drive responsibly. Never drink &amp; drive.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="fab" href="https://wa.me/6589567796" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
+  </a>
+
+  <script src="script.js?v=9"></script>
+</body>
+</html>

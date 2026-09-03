@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/poopiepie/bulderwebsite/logo.png)",
+      "Bash(python3 -c \"import PIL; print\\('PIL ok'\\)\")",
+      "Bash(python3 -)",
+      "Bash(ffmpeg -y -v error -i websiteherovideo.mp4 -vf \"scale=1920:1080\" -c:v libx264 -profile:v high -crf 21 -preset slow -pix_fmt yuv420p -movflags +faststart -an assets/herovideo.mp4)",
+      "Bash(curl -s http://localhost:8124/index.html)",
+      "Bash(sed -i '' 's|fill=\"%2316191d\"|fill=\"%232f4f62\"|; s|fill=\"%23dcf64a\"|fill=\"%23ffffff\"|' index.html contact.html)",
+      "Bash(sed -i '' 's|style.css?v=5|style.css?v=6|; s|script.js?v=5|script.js?v=6|' index.html contact.html)",
+      "Bash(git config *)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(git init *)",
+      "Bash(git branch *)",
+      "Bash(git add *)"
+    ]
+  }
+}
