@@ -511,33 +511,14 @@ body.preloading { overflow: hidden; }
 .svc.reveal { transform: translateY(46px) scale(0.975); }
 .svc.reveal.in { transform: none; }
 
-/* ---------- Rates ---------- */
-.rate-grid {
+/* ---------- Shop / Rates ---------- */
+.shop-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 1.1rem;
   align-items: stretch;
 }
-.rate-main {
-  background: var(--dark);
-  color: #fff;
-  border-radius: 22px;
-  padding: clamp(2rem, 3.4vw, 2.8rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 2.4rem;
-  box-shadow: 0 30px 70px -26px rgba(20, 24, 27, 0.6);
-}
-.rate-main__top { display: flex; justify-content: space-between; gap: 1.5rem; align-items: flex-start; }
-.rate-main h3 {
-  font-family: var(--display);
-  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.1rem;
-}
-.rate-list { list-style: none; }
+.rate-list { list-style: none; margin-top: 1.2rem; }
 .rate-list li {
   position: relative;
   padding-left: 1.3rem;
@@ -553,60 +534,104 @@ body.preloading { overflow: hidden; }
   background: var(--accent-light);
   border-radius: 2px;
 }
-.rate-price {
+
+/* Product cards */
+.shop-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(20, 24, 27, 0.04), 0 16px 34px -18px rgba(20, 24, 27, 0.2);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+.shop-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 2px 5px rgba(20, 24, 27, 0.05), 0 34px 62px -22px rgba(20, 24, 27, 0.34);
+}
+
+/* Featured dark card */
+.shop-card--main {
+  background: var(--dark);
+  color: #fff;
+  border-color: transparent;
+  padding: clamp(2rem, 3.4vw, 2.9rem);
+  justify-content: space-between;
+  box-shadow: 0 30px 70px -26px rgba(20, 24, 27, 0.6);
+}
+.shop-card--main .tag { color: var(--muted-dark); }
+.shop-card__badge {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  background: var(--accent-light);
+  color: var(--ink);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+}
+.shop-card__body { margin-bottom: 2.2rem; }
+.shop-card__title {
   font-family: var(--display);
   font-weight: 700;
-  font-size: clamp(3.4rem, 7vw, 5.4rem);
-  line-height: 0.9;
+  letter-spacing: -0.02em;
+  margin-top: 0.9rem;
+}
+.shop-card--main .shop-card__title { font-size: clamp(1.9rem, 3vw, 2.6rem); }
+.shop-card__desc { margin-top: 0.7rem; font-size: 0.92rem; color: var(--muted-dark); max-width: 42ch; line-height: 1.65; }
+.shop-card--main .shop-card__desc { color: var(--muted-dark); }
+
+.shop-card__foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.shop-card__price {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(3rem, 6vw, 4.8rem);
+  line-height: 0.85;
   letter-spacing: -0.04em;
   color: var(--accent-light);
   display: flex;
   align-items: flex-start;
 }
-.rate-price span { font-size: 0.36em; margin-top: 0.35em; margin-right: 0.08em; }
-.rate-main__btn { align-self: flex-start; }
-
-.rate-side { display: flex; flex-direction: column; gap: 1.1rem; }
-.rate-row {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 1.15rem 1.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  box-shadow: 0 1px 2px rgba(20, 24, 27, 0.04), 0 14px 30px -20px rgba(20, 24, 27, 0.22);
-  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
-}
-.rate-row:hover { transform: translateY(-4px); box-shadow: 0 2px 5px rgba(20,24,27,0.05), 0 26px 48px -24px rgba(20,24,27,0.34); }
-.rate-row__name { font-size: 0.9rem; color: var(--muted); }
-.rate-row__val { font-family: var(--display); font-weight: 700; font-size: 1.15rem; }
-
-.rate-phone {
-  margin-top: auto;
-  background: var(--accent);
-  border-radius: 16px;
-  padding: 1.2rem 1.4rem;
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  color: #fff;
-  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
-}
-.rate-phone span {
-  display: block;
+.shop-card__price span { font-size: 0.36em; margin-top: 0.4em; margin-right: 0.06em; }
+.shop-card__price small {
   font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  opacity: 0.62;
-  margin-bottom: 0.3rem;
+  font-size: 0.2em;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--muted-dark);
+  align-self: flex-end;
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
 }
-.rate-phone:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -16px rgba(47, 79, 98, 0.6); }
+
+/* Add-on light cards */
+.shop-side { display: flex; flex-direction: column; gap: 1.1rem; }
+.shop-card--addon { padding: 1.6rem 1.6rem 1.5rem; flex: 1; justify-content: space-between; }
+.shop-card--addon .shop-card__body { margin-bottom: 1.3rem; }
+.shop-card--addon .shop-card__title { font-size: 1.3rem; margin-top: 0; }
+.shop-card--addon .shop-card__desc { color: var(--muted); }
+.shop-card__price--sm { font-size: clamp(2rem, 3.4vw, 2.6rem); color: var(--accent); }
+.shop-card__price--sm span { font-size: 0.5em; margin-top: 0.15em; }
+
+.shop-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  padding: 0 0.2rem;
+}
+
+/* Buy slot — fallback button + injected Stripe button */
+.buy-slot { display: inline-flex; align-items: center; }
+.buy-slot stripe-buy-button { display: block; }
 
 /* ---------- How ---------- */
 .how { background: var(--off); }
@@ -890,7 +915,7 @@ body.preloading { overflow: hidden; }
   .nav { padding-inline: calc(var(--gut) + 12px); }
   .hero__pin { height: 260vh; }
   .hero__img { object-position: center 70%; }
-  .rate-grid { grid-template-columns: 1fr; }
+  .shop-grid { grid-template-columns: 1fr; }
   .cards--3 { grid-template-columns: 1fr; }
   .coverage__stats { grid-template-columns: 1fr; gap: 1.4rem; }
   .newsletter__inner { grid-template-columns: 1fr; }
@@ -901,8 +926,7 @@ body.preloading { overflow: hidden; }
   .cards, .svc-grid { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
-  .rate-main__top { flex-direction: column; }
-  .rate-price { align-self: flex-end; }
+  .shop-card__foot { align-items: flex-start; }
   .newsletter__row { flex-direction: column; border-radius: 20px; padding: 0.85rem; gap: 0.7rem; }
   .newsletter__row input { padding: 0.4rem 0.6rem; }
   .newsletter__consent, .newsletter__done { padding-left: 0.4rem; }

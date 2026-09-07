@@ -13,7 +13,11 @@
       "Bash(gh repo *)",
       "Bash(git init *)",
       "Bash(git branch *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -q -m 'Parki Valet website *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(git commit -q -m 'Add e-commerce shop section with Stripe Buy Button slots, preloader, remove video section *)"
     ]
   }
 }

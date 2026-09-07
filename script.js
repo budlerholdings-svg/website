@@ -3,6 +3,39 @@
 (function () {
   "use strict";
 
+  /* ---------- Stripe Buy Buttons ---------- */
+  // Each .buy-slot carries data-stripe-buy-button-id + data-stripe-publishable-key.
+  // Until BOTH are filled in (Stripe Dashboard -> Buy button), the styled
+  // "Book & pay" fallback stays. Once real values are present, we load the
+  // Stripe script and swap in the real <stripe-buy-button>.
+  (function initStripe() {
+    const slots = document.querySelectorAll(".buy-slot");
+    if (!slots.length) return;
+    const isReal = (v) => v && !/REPLACE/i.test(v) && v.trim() !== "";
+    let needScript = false;
+
+    slots.forEach((slot) => {
+      const id = slot.getAttribute("data-stripe-buy-button-id");
+      const key = slot.getAttribute("data-stripe-publishable-key");
+      if (!isReal(id) || !isReal(key)) return; // keep the fallback
+      needScript = true;
+      const fallback = slot.querySelector(".buy-fallback");
+      if (fallback) fallback.hidden = true;
+      const btn = document.createElement("stripe-buy-button");
+      btn.setAttribute("buy-button-id", id.trim());
+      btn.setAttribute("publishable-key", key.trim());
+      slot.appendChild(btn);
+    });
+
+    if (needScript && !document.getElementById("stripe-buy-js")) {
+      const s = document.createElement("script");
+      s.id = "stripe-buy-js";
+      s.async = true;
+      s.src = "https://js.stripe.com/v3/buy-button.js";
+      document.head.appendChild(s);
+    }
+  })();
+
   const nav = document.getElementById("nav");
   const burger = document.getElementById("burger");
   const mobileMenu = document.getElementById("mobileMenu");
